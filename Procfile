@@ -1,1 +1,1 @@
-web: gunicorn FestiveCulture.wsgi
+web: gunicorn FestivCulture.wsgi
