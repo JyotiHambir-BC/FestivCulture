@@ -21,5 +21,5 @@ from home import views as index_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index_views.homepage.as_view(), name='home'),
+    path('home/', index_views.homepage.as_view(), name='home'),
 ]

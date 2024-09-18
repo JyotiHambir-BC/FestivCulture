@@ -1,75 +1,60 @@
+{% extends 'base.html' %}
 {% load static %}
+{% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-    <!-- Stylesheet CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    
-    <title>Cultural Festive India</title>
-</head>
-<body>
-    <h1>Welcome to the Cultural Festival World of India</h1>
-    <ul>
-      <li>
-      India is having 28 states and each states are Unique in Celebrating Festivals, speaking Languages, having there own special foods for the every Festival.
-    </li>
-    <li>
-      This Website has made for the people who wants to know Indian Festival and there Culture, how they celebrate it, whats the reason behind every festival.
-    </li>
-    <li>
-      This Website blog having Festival's brief information and when its celebrated what foods they preparing for make this festival more special.
-    </li>
-  </ul>
+<!-- Carousel Section -->>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="{% static 'media/homepage-images/holi.png' %}" class="d-block w-100" alt="Holi Image">
-        </div>
-        <div class="carousel-item">
-          <img src="{% static 'media/homepage-images/durgapuja.png' %}" class="d-block w-100" alt="Durgapuja Image">
-        </div>
-        <div class="carousel-item">
-          <img src="{% static 'media/homepage-images/eid.png' %}" class="d-block w-100" alt="Eid Celebration Image">
-        </div>
-        <div class="carousel-item">
-          <div class="carousel-item">
-            <img src="{% static 'media/homepage-images/ganesh-chaturthi.png' %}" class="d-block w-100" alt="Ganesh Chaturthi Image">
-          </div>
-          <div class="carousel-item">
-            <img src="{% static 'media/homepage-images/lohri.png' %}" class="d-block w-100" alt="Lohri Image">
-          </div>
-        </div>
-          <img src="{% static 'media/homepage-images/onam.png' %}" class="d-block w-100" alt="Onam Celebration Image">
-        </div>
-        <div class="carousel-item"></div>
-          <img src="{% static 'media/homepage-images/pongal.png' %}" class="d-block w-100" alt="Pongal Celebration Image">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+<section id="hero-section">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+        aria-label="Slide 3"></button>
     </div>
-</body>
-</html>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'media/homepage-images/holi.png' %}" class="d-block w-100" alt="Holi Image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'media/homepage-images/durgapuja.png' %}" class="d-block w-100" alt="Durgapuja Image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'media/homepage-images/eid.png' %}" class="d-block w-100" alt="Eid Celebration Image">
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-item">
+          <img src="{% static 'media/homepage-images/ganesh-chaturthi.png' %}" class="d-block w-100"
+            alt="Ganesh Chaturthi Image">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'media/homepage-images/lohri.png' %}" class="d-block w-100" alt="Lohri Image">
+        </div>
+      </div>
+      <img src="{% static 'media/homepage-images/onam.png' %}" class="d-block w-100" alt="Onam Celebration Image">
+    </div>
+    <div class="carousel-item"></div>
+    <img src="{% static 'media/homepage-images/pongal.png' %}" class="d-block w-100" alt="Pongal Celebration Image">
+  </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  </div>
+</section>
+{% endblock content %}
