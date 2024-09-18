@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     
-    path(),
+    path('', views.AllFestivals.as_view(), name="festivals"),
 ]
