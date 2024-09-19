@@ -1,10 +1,10 @@
 {% load static %}
-
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
-<!-- {% url 'account_login' as login_url %}
+{% url 'festivals' as festivals_url %}
+{% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
-{% url 'account_logout' as logout_url %} -->
+{% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,8 +36,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">c<span class="red-o">o</span>de<span
-                        class="thin">|star</span></span></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Festiv<span class="red-text">C</span><span class="green-text">u</span><span class="orange-text">l</span><span class="red-text">t</span><span class="green-text">u</span><span class="orange-text">r</span><span class="red-text">e</span></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,6 +50,10 @@
                     <li class=nav-item>
                         <a class="nav-link {% if request.path == about_url %}active" aria-current="page {% endif %}"
                             href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class=nav-item></li>
+                        <a class="nav-link {% if request.path == festivals_url%}active" aria-current="page {% endif %}"
+                            href="{% url 'festivals' %}">Festivals</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
