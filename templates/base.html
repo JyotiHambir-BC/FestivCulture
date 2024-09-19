@@ -52,7 +52,7 @@
                         <a class="nav-link {% if request.path == about_url %}active" aria-current="page {% endif %}"
                             href="{% url 'about' %}">About</a>
                     </li>
-                    <!-- {% if user.is_authenticated %}
+                    {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active" aria-current="page {% endif %}"
                             href="{% url 'account_logout' %}">Logout</a>
@@ -65,8 +65,8 @@
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == login_url %}active" aria-current="page {% endif %}"
                             href="{% url 'account_login' %}">Login</a>
-                    </li> -->
-                    <!-- {% endif %} -->
+                    </li>
+                    {% endif %}
                 </ul>
                 <span class="navbar-text text-muted">
                     adventures of a software developer
