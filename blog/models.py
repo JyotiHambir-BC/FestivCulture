@@ -25,8 +25,12 @@ class Post(models.Model):
 
     class meta:
         ordering = ["-created_on", "author"]
+    
     def __str__(self):
         return f"{self.title} | written by {self.author}"
+    
+    def number_of_likes(self):
+        return self.likes.count()
 
 class Comment(models.Model):
     """
