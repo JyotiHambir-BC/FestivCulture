@@ -10,7 +10,7 @@ class AllFestivals(generic.ListView):
     """
     Display the blogs in list on festival page.
     """
-    queryset = Post.objects.all().filter(status=1)
+    queryset = Post.objects.filter(status=1)
     template_name = "festival.html"
     paginate_by = 6
 
