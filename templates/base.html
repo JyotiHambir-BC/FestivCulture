@@ -1,4 +1,5 @@
 {% load static %}
+
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'festivals' as festivals_url %}
@@ -16,6 +17,9 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- Google font 'Poppins' link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +40,11 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Festiv<span class="red-text">C</span><span class="green-text">u</span><span class="orange-text">l</span><span class="red-text">t</span><span class="green-text">u</span><span class="orange-text">r</span><span class="red-text">e</span></span></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Festiv<span
+                        class="red-text">C</span><span class="green-text">u</span><span
+                        class="orange-text">l</span><span class="red-text">t</span><span
+                        class="green-text">u</span><span class="orange-text">r</span><span
+                        class="red-text">e</span></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,8 +60,8 @@
                             href="{% url 'about' %}">About</a>
                     </li>
                     <li class=nav-item></li>
-                        <a class="nav-link {% if request.path == festivals_url%}active" aria-current="page {% endif %}"
-                            href="{% url 'festivals' %}">Festivals</a>
+                    <a class="nav-link {% if request.path == festivals_url%}active" aria-current="page {% endif %}"
+                        href="{% url 'festivals' %}">Festivals</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -110,7 +118,7 @@
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-white">
             {% block copyright %}
-            Made by Code Instituters
+            Made by Jyoti Hambir
             {% endblock copyright %}
         </p>
         <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
