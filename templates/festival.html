@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load static %}
 
 
@@ -17,7 +17,7 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top" src="{% static 'media/homepage-images/eid.jpg' %}"
+                                <img class="card-img-top" src="{% static 'media/homepage-images/eid.jpg' %}" width="100%"
                                     alt="placeholder image">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
@@ -30,10 +30,18 @@
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{post.excerpt}}</p>
                             </a>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-align:left"><strong>Best Time to Visit: </strong> <span>{{ post.best_time }}</span></li>
+                                <!-- <li class="list-group-item text-center"><strong>Ideal Duration: </strong> <span> {{ post.ideal_duration }}</span></li> -->
+                            </ul>
 
                             <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}}
-                            </p>
+                            <div class="card-footer">
+                                <span>Author: {{ post.author }} | </span>
+                                <span>{{ post.created_on}} | </span>
+                                <span><i class="fas fa-heart"></i> {{ post.number_of_likes }} </span>
+                                <span class="text-secondary"> | <i class="far fa-comments"></i></span>
+                            </div>
                         </div>
                     </div>
                 </div>

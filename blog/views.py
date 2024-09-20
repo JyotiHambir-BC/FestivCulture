@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_object_or_404, reverse
-from django.views import generic
+from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.views import generic, View
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
@@ -36,7 +36,7 @@ def details_post(request, slug):
 
     return render(
         request,
-        "festival.html",
+        "details_post.html",
         {"post": post,
         "comments": comments,
         "comments_count": comment_count,
@@ -84,3 +84,21 @@ def comment_delete(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('details_post', args=[slug]))
 
+class PostLike(View):
+    """
+    When a post is liked/unliked, the slug is noted
+    and the like/unlike is counted. Total likes display
+    """
+
+    def post(self, request, slug, *args):
+        post = get_object_or_404(Post, slug=slug)
+
+        if post.likes.filter(id=self.request.user.id).exists():
+            post.likes.remove(request.user)
+            messages.success(request, "You have unliked this post.")
+        else:
+            post.likes.add(request.user)
+            messages.success(request, "You have liked this post, Thanks!")
+        return HttpResponseRedirect(reverse("details_post", args=[slug]))
+
+   
