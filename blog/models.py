@@ -1,4 +1,5 @@
 from django.db import models
+from django import forms
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
@@ -47,4 +48,19 @@ class Comment(models.Model):
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
 
+class Reviews(models.Model):
+    """
+    Stores a review of blogs.
+    """
+    CHOICES = [('Y','Yes'),('N','No')]
+
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="reviews")
+    name = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reviewer")
+    review = models.TextField()
+    like = forms.CharField(label='Like', widget=forms.RadioSelect(choices=CHOICES))
+    created_on = models.DateTimeField(auto_now=True)
     
+    class Meta:
+        ordering = ["-created_on"]
+    def __str__(self):
+        return f"Review: {self.review} by {self.name}"

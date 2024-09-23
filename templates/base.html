@@ -64,6 +64,7 @@
                         href="{% url 'festivals' %}">Festivals</a>
                     </li>
                     {% if user.is_authenticated %}
+                   
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active" aria-current="page {% endif %}"
                             href="{% url 'account_logout' %}">Logout</a>
@@ -77,7 +78,7 @@
                         <a class="nav-link {% if request.path == login_url %}active" aria-current="page {% endif %}"
                             href="{% url 'account_login' %}">Login</a>
                     </li>
-                    {% endif %}
+                    {% endif %}                    
                 </ul>
                 <span class="navbar-text text-muted">
                     This site is Education purpose only.
