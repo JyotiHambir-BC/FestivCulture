@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
 
@@ -7,11 +7,8 @@
     <div class="row">
         <div class="col-12 col-md-4 text-center">
             {% if "placeholder" in about.profile_image.url %}
-            <img src="{% static 'images/nobody.jpg' %}" class="profile_image">
-            {% else %}
             <img src="{{ about.profile_image.url }}" class="profile_image" alt="{{ about.title }}">
             {% endif %}
-
         </div>
         <div class="col-12 col-md-8">
             <h2>{{ about.title }}</h2>
@@ -23,7 +20,8 @@
         <div class="row">
             <h2 class="text-center mt-4">How to reach India?</h2>
             <div class="text-center mb-4">
-                <img src="{% static 'media/decorative-line-img/decorative-line.png' %}" class="decorative-line" alt="line decoraction">
+                <img src="{% static 'media/decorative-line-img/decorative-line.png' %}" class="decorative-line"
+                    alt="line decoraction">
             </div>
             <div class="col-md-6">
                 <h3 class="text-center"> <i class="fa-solid fa-ship"></i> Reaching India by Sea</h3>

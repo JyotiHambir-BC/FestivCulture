@@ -6,4 +6,4 @@ from .models import About
 
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
-    summernote_fields = ('content')
+    summernote_fields = ('content',)
