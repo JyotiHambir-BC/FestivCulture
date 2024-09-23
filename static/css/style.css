@@ -192,3 +192,7 @@ body {
     color: rgb(222, 146, 168);
 }
 
+.decorative-line {
+    mix-blend-mode: multiply;
+    width: 200px;
+}
