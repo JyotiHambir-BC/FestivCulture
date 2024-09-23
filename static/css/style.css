@@ -119,9 +119,17 @@ body {
     z-index: 100;
 }
 
-.profile_image {
-    width: 75%;
+.about-row {
+    box-shadow: #1f1f43;
 }
+
+.profile_image {
+    width: 100%;
+    margin-bottom: 50px;
+    border-radius: 4px;
+}
+
+
 
 .post-link {
     text-decoration: none;
