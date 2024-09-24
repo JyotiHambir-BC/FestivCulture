@@ -41,6 +41,7 @@ def details_post(request, slug):
         "comments": comments,
         "comments_count": comment_count,
         "comment_form": comment_form,
+        
         },
         
     )
@@ -100,5 +101,8 @@ class PostLike(View):
             post.likes.add(request.user)
             messages.success(request, "You have liked this post, Thanks!")
         return HttpResponseRedirect(reverse("details_post", args=[slug]))
+
+
+
 
    
