@@ -26,19 +26,17 @@
                 <!-- Use the | safe filter inside the template tags -->
                 <div class="row text-center month-display">
                     <div>
-                        <span><strong>This Festival Is Celebrated In: {{post.best_time}}</strong>
-                            
-                        </span>
-                        
+                        <span><strong>This Festival Is Celebrated In: {{post.best_time}}</strong></span>
                     </div>
-                   
-                    
-                    
+                    <div class="text-center mb-4">
+                        <img src="{% static 'media/decorative-line-img/decorative-line.png' %}" class="decorative-line"
+                            alt="line decoraction">
+                    </div>
                 </div>
                 <article> {{ post.content | safe }} </article>
                 <hr>
             </div>
-            
+
         </div>
     </div>
     <!-- Displaying count of comments -->
