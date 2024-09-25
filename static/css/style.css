@@ -61,13 +61,9 @@ body {
 
 .card-body {
     flex: 1 1 auto;
-    padding: 1rem 1rem;
-    border-block: inherit;
-    border: 2px solid orange;
-    margin: 20px;
-    box-shadow: 0 0 4px 4px #ffc107;
-    /* -moz-box-shadow: 0 0 5px 2px #fff; */
-    
+    padding: 1rem 1rem;      
+    margin: 30px;
+    box-shadow: 0 0 4px 4px #ffc107; 
 }
 
 .image-container {
