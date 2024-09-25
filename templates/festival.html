@@ -13,7 +13,7 @@
             <div class="row">
                 {% for post in post_list %}
                 <div class="col-md-4">
-                    <div class="card mb-4">
+                    <div class="card mb-4 h-100">
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
@@ -21,25 +21,22 @@
                                     alt="placeholder image">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div>
+                                {% endif %}                                
                             </div>
                             <a href="{% url 'details_post' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{post.excerpt}}</p>
+                                <h2 class="card-title text-center">{{ post.title }}</h2>
+                                <p class="card-text text-align:justify">{{post.excerpt}}</p>
                             </a>
+                            <hr>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item text-align:left"><strong>When this Festival is Celebrated: </strong> <span>{{ post.best_time }}</span></li>
-                                <!-- <li class="list-group-item text-center"><strong>Ideal Duration: </strong> <span> {{ post.ideal_duration }}</span></li> -->
+                                <li class="list-group-item text-align:left"><strong>When this Festival is Celebrated: </strong> <span>{{ post.best_time }}</span></li>                                
                             </ul>
 
                             <hr />
                             <div class="card-footer">
                                 <span>Author: {{ post.author }} | </span>
                                 <span>{{ post.created_on}} | </span>
-                                <span><i class="fas fa-heart"></i> {{ post.number_of_likes }} </span>
+                                <span><i class="fa-solid fa-thumbs-up"></i> {{ post.number_of_likes }} </span>
                                 <span class="text-secondary"> | <i class="far fa-comments"></i></span>
                             </div>
                         </div>

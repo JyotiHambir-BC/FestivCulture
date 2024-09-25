@@ -41,24 +41,26 @@
     </div>
     <!-- Displaying count of comments -->
     <div class="row">
-        <div class="col-12">
+        <div class="col-md-6">
             <strong class="text-secondary">
                 <i class="far fa-comments"></i> {{ comment_count }}
             </strong>
+
+            <!--Displaying total likes-->
             <strong>
                 {% if user.is_authenticated %}
                 <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                     {% csrf_token %}
                     {% if post.likes %}
                     <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                            class="fa-solid fa-heart"></i></button>
+                            class="fa-solid fa-thumbs-up"></i></button>
                     {% else %}
                     <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                            class="fa-regular fa-heart"></i></button>
+                            class="fa-regular fa-thumbs-up"></i></button>
                     {% endif %}
                 </form>
                 {% else %}
-                <span class="text-secondary"><i class="fa-regular fa-heart"></i></span>
+                <span class="text-secondary"><i class="fa-regular fa-thumbs-up"></i></span>
                 {% endif %}
                 <span class="text-secondary"> {{ post.number_of_likes }}</span>
             </strong>
