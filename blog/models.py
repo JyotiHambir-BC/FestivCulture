@@ -23,6 +23,7 @@ class Post(models.Model):
     best_time = models.CharField(max_length=100, verbose_name="Best time(month/season)")
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
+    favourite_post = models.ManyToManyField(User, related_name="favourite_post", blank=True)
 
     class meta:
         ordering = ["-created_on", "author"]
@@ -32,6 +33,9 @@ class Post(models.Model):
     
     def number_of_likes(self):
         return self.likes.count()
+
+    def number_of_comment_count(self):
+        return self.comment_count.count()
 
 class Comment(models.Model):
     """
@@ -45,6 +49,8 @@ class Comment(models.Model):
   
     class Meta:
         ordering = ["-created_on"]
+
+    
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
 

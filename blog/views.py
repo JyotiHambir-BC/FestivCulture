@@ -41,7 +41,7 @@ def details_post(request, slug):
         "comments": comments,
         "comments_count": comment_count,
         "comment_form": comment_form,
-        
+               
         },
         
     )
@@ -83,7 +83,7 @@ def comment_delete(request, slug, comment_id):
     else:
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
-    return HttpResponseRedirect(reverse('details_post', args=[slug]))
+    return HttpResponseRedirect(reverse("details_post", args=[slug]))
 
 class PostLike(View):
     """
