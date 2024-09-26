@@ -253,3 +253,16 @@ body {
 .star {
     color: yellow;
 }
+
+.alert-info {
+    color: #055160;
+    background-color: #cff4fc;
+    border-color: #b6effb;
+}
+
+.carousel-images {
+    margin-left: 15px;
+    margin-right: 15px;
+    position: relative;
+    overflow: hidden;
+}
