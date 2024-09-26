@@ -215,6 +215,7 @@ body {
 .decorative-line {
     mix-blend-mode: multiply;
     width: 200px;
+    margin-bottom: 20px;
 }
 
 .month-display {
