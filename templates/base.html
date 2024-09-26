@@ -3,6 +3,7 @@
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'festivals' as festivals_url %}
+{% url 'my_favourite' as view_favourite_list_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -59,10 +60,16 @@
                         <a class="nav-link {% if request.path == about_url %}active" aria-current="page {% endif %}"
                             href="{% url 'about' %}">About</a>
                     </li>
-                    <li class=nav-item></li>
+                    <li class=nav-item>
                     <a class="nav-link {% if request.path == festivals_url%}active" aria-current="page {% endif %}"
                         href="{% url 'festivals' %}">Festivals</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class=nav-item>
+                        <a class="nav-link {% if request.path == my_favourite_url%}active" aria-current="page {% endif %}"
+                            href="{% url 'view_favourite_list' %}">My Favoutite</a>
+                        </li>
+                        {% endif %}
                     {% if user.is_authenticated %}
                    
                     <li class="nav-item">

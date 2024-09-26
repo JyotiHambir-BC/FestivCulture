@@ -40,7 +40,7 @@
         </div>
     </div>
     <!-- Displaying count of comments -->
-    <div class="row">
+    <div class="row col-12">
         <div class="col-md-6">
             <strong class="text-secondary">
                 <i class="far fa-comments"></i> {{ comment_count }}
@@ -65,20 +65,20 @@
                 <span class="text-secondary"> {{ post.number_of_likes }}</span>
             </strong>
         </div>
-        <div class="favourite-section">
-            
-            
+        <div class="col-md-6 favourite-section">
+            <button id="submitButton" type="submit" class="btn btn-signup btn-lg float-end">Add to Favourite
+
                 {% if is_favourite %}
                 <a href="{% url 'favourite_list' post.slug %}">
-                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star star"></i>
                 </a>
-                
+
                 {% else %}
                 <a href="{% url 'favourite_list' post.slug %}">
-                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star star"></i>
                 </a>
                 {% endif %}
-            
+            </button>
         </div>
     </div>
 

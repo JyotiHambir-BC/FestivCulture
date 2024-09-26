@@ -11,5 +11,6 @@ urlpatterns = [
          views.comment_delete, name='comment_delete'),
     path("like/<slug:slug>/", views.PostLike.as_view(), name="post_like"),
     path('favourite/<slug:slug>', views.favourite_list, name='favourite_list'),
+    path('favourite/', views.view_favourite_list, name='view_favourite_list'),
     
 ]
