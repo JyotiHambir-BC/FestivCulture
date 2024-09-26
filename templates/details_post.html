@@ -65,6 +65,21 @@
                 <span class="text-secondary"> {{ post.number_of_likes }}</span>
             </strong>
         </div>
+        <div class="favourite-section">
+            
+            
+                {% if is_favourite %}
+                <a href="{% url 'favourite_list' post.slug %}">
+                    <i class="fa-solid fa-star"></i>
+                </a>
+                
+                {% else %}
+                <a href="{% url 'favourite_list' post.slug %}">
+                    <i class="fa-regular fa-star"></i>
+                </a>
+                {% endif %}
+            
+        </div>
     </div>
 
 

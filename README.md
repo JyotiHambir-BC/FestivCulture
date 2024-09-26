@@ -35,6 +35,8 @@ Please find my Kanban Board with my user stories [here](https://github.com/users
 
 ## Design
 
+* To choose the colour I used [Faltui Colour Picker](https://www.flatuicolorpicker.com/colors/vivid/)
+
 ### Typography
 
 * Fonts were imported using Google Fonts. Poppins was used throughout with a backup of sans-serif. It was chosen for easy readability for users.

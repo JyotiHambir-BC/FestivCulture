@@ -19,6 +19,10 @@ def details_post(request, slug):
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+    is_favourite = False
+
+    if post.favourite_post.filter(id=request.user.id):
+        is_favourite = True
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
@@ -41,6 +45,7 @@ def details_post(request, slug):
         "comments": comments,
         "comments_count": comment_count,
         "comment_form": comment_form,
+        "is_favourite": is_favourite,
                
         },
         
@@ -103,7 +108,26 @@ class PostLike(View):
         return HttpResponseRedirect(reverse("details_post", args=[slug]))
 
 
+def favourite_list(request, slug):
+    post = get_object_or_404(Post, slug=slug)
 
+    if post.favourite_post.filter(id=request.user.id).exists():
+        post.favourite_post.remove(request.user)
+        messages.success(request, "You have removed this Post from your Favourite List.")
+    else:
+        post.favourite_post.add(request.user)
+        messages.success(request, "You have added this Post in your Favourite List.")
+
+    return HttpResponseRedirect(reverse("details_post", args=[slug]))
+
+
+def view_favourite_list(request):
+    user = request.user
+    favourite_lists = user.favourite_post.all()
+    context = {
+        "favourite_lists": favourite_lists,
+    }
+    return render(request, "favourite_list.html", context)
 
 
 
