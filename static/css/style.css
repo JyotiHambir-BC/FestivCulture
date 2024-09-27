@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Ribeye+Marrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -40,11 +41,15 @@ body {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #E84610;
 }
 
 .main-bg {
     background-color: #F9FAFC;
+}
+
+.homepage-color {
+    background-color: lightgoldenrodyellow;
 }
 
 .nav-item {
@@ -265,4 +270,11 @@ body {
     margin-right: 15px;
     position: relative;
     overflow: hidden;
+}
+
+.home-page-text {
+    text-align: center;
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
 }
