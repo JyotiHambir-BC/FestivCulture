@@ -67,7 +67,7 @@
                     {% if user.is_authenticated %}
                     <li class=nav-item>
                         <a class="nav-link {% if request.path == my_favourite_url%}active" aria-current="page {% endif %}"
-                            href="{% url 'view_favourite_list' %}">My Favoutite</a>
+                            href="{% url 'view_favourite_list' %}">My Favourite</a>
                         </li>
                         {% endif %}
                     {% if user.is_authenticated %}

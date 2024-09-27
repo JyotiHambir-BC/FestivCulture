@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post, Comment
+from .models import Post, Comment, Favourite
 from .forms import CommentForm
 
 # Create your views here.
@@ -43,7 +43,7 @@ def details_post(request, slug):
         "details_post.html",
         {"post": post,
         "comments": comments,
-        "comments_count": comment_count,
+        "comment_count": comment_count,
         "comment_form": comment_form,
         "is_favourite": is_favourite,
                
@@ -52,7 +52,10 @@ def details_post(request, slug):
     )
 
 def comment_edit(request, slug, comment_id):
-        if request.method == "POST":
+    """
+    Edit the single comment which have already submitted.
+    """
+    if request.method == "POST":
             queryset = Post.objects.filter(status=1)
             post = get_object_or_404(queryset, slug=slug)
             comment = get_object_or_404(Comment, pk=comment_id)
@@ -67,7 +70,7 @@ def comment_edit(request, slug, comment_id):
             else:
                 messages.add_message(request, messages.ERROR, 'Error Updating Comments')
 
-        return HttpResponseRedirect(reverse('details_post', args=[slug]))
+    return HttpResponseRedirect(reverse('details_post', args=[slug]))
 
 def comment_delete(request, slug, comment_id):
     """
@@ -122,12 +125,17 @@ def favourite_list(request, slug):
 
 
 def view_favourite_list(request):
+    """
+    View all selected favourite posts in favourite list on different page
+    """
     user = request.user
     favourite_lists = user.favourite_post.all()
     context = {
         "favourite_lists": favourite_lists,
     }
     return render(request, "favourite_list.html", context)
+
+
 
 
 

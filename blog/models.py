@@ -54,3 +54,19 @@ class Comment(models.Model):
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
 
+
+class Favourite(models.Model):
+    """
+    Stores a single blog's in favourite list. 
+    """
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="Favourite_Post")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="Added_By")
+    Comment = models.TextField()
+    added_on = models.DateTimeField(auto_now=True)
+  
+    class Meta:
+        ordering = ["-added_on"]
+
+    def __str__(self):
+        return f"Added by {self.author} on {self.added_on}"
+

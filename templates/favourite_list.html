@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
 
 <div class="container-fluid">
@@ -13,6 +14,8 @@
                         </div>
                     </div>
                 {% else %}
+
+                
                     {% for post in favourite_lists %}
                     <div class="col-md-4">
                         <div class="card mb-4 h-100">
@@ -41,21 +44,27 @@
                                     <span><i class="fa-solid fa-thumbs-up"></i> {{ post.number_of_likes }} </span>
                                     <span class="text-secondary"> | <i class="far fa-comments"></i></span>
                                 </div>
+                               
                             </div>
                         </div>
                     </div>
+                    
                     {% if forloop.counter|divisibleby:3 and not forloop.last %}
                 </div>
                 <div class="row">
-                    {% endif %}
+                    {% endif %}                    
                     {% endfor %}
+                    
                     {% if forloop.last and not forloop.counter|divisibleby:3 %}
                         </div> <!-- Close the last row if it hasn't been closed -->
                     {% endif %}
                 {% endif %}
+                
+                
             </div>
         </div>
     </div>
+    
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
