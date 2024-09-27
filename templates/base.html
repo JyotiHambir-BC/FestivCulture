@@ -3,7 +3,7 @@
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'festivals' as festivals_url %}
-{% url 'my_favourite' as view_favourite_list_url %}
+{% url 'view_favourite_list' as view_favourite_list_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -46,46 +46,47 @@
                         class="orange-text">l</span><span class="red-text">t</span><span
                         class="green-text">u</span><span class="orange-text">r</span><span
                         class="red-text">e</span></span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active" aria-current="page {% endif %}"
-                            href="{% url 'home' %}">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}"
+                            aria-label="Go to the home page">Home</a>
                     </li>
                     <li class=nav-item>
-                        <a class="nav-link {% if request.path == about_url %}active" aria-current="page {% endif %}"
-                            href="{% url 'about' %}">About</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'about' %}"
+                            aria-label="G0o to the about page">About</a>
                     </li>
                     <li class=nav-item>
-                    <a class="nav-link {% if request.path == festivals_url%}active" aria-current="page {% endif %}"
-                        href="{% url 'festivals' %}">Festivals</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'festivals' %}"
+                            aria-label="Go to the festivals page">Festivals</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class=nav-item>
-                        <a class="nav-link {% if request.path == my_favourite_url%}active" aria-current="page {% endif %}"
-                            href="{% url 'view_favourite_list' %}">My Favourite</a>
-                        </li>
-                        {% endif %}
+                        <a class="nav-link active" aria-current="page" href="{% url 'view_favourite_list' %}"
+                            aria-label="Go to the my favourite page">My Favourite</a>
+                    </li>
+                    {% endif %}
                     {% if user.is_authenticated %}
-                   
+
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active" aria-current="page {% endif %}"
-                            href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'account_logout' %}"
+                            aria-label="Go to the account_logout page">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active" aria-current="page {% endif %}"
-                            href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'account_signup' %}"
+                            aria-label="Go to the account_signup page">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active" aria-current="page {% endif %}"
-                            href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'account_login' %}"
+                            aria-label="Go to the account_login page">Login</a>
                     </li>
-                    {% endif %}                    
+                    {% endif %}
                 </ul>
                 <span class="navbar-text text-muted">
                     This site is Education purpose only.
@@ -128,7 +129,7 @@
         <div class="content">
             <!-- Your main page content goes here -->
         </div>
-    
+
         <footer class="footer mt-auto py-3 dark-bg">
             <p class="m-0 text-center text-white">
                 {% block copyright %}
@@ -143,7 +144,7 @@
             </p>
         </footer>
     </div>
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
