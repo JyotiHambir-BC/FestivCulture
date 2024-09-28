@@ -1,5 +1,6 @@
 from django.db import models
 from django import forms
+from django.utils import timezone
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
@@ -24,6 +25,7 @@ class Post(models.Model):
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     favourite_post = models.ManyToManyField(User, related_name="favourite_post", blank=True)
+    added_on = models.DateTimeField(auto_now_add=True)
 
     class meta:
         ordering = ["-created_on", "author"]
@@ -36,6 +38,9 @@ class Post(models.Model):
 
     def number_of_comment_count(self):
         return self.comment_count.count()
+
+    def __str__(self):
+        return self.added_on()
 
 class Comment(models.Model):
     """
@@ -62,11 +67,25 @@ class Favourite(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="Favourite_Post")
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="Added_By")
     Comment = models.TextField()
-    added_on = models.DateTimeField(auto_now=True)
+    added_on = models.DateTimeField(auto_now_add=True)
   
     class Meta:
         ordering = ["-added_on"]
 
     def __str__(self):
         return f"Added by {self.author} on {self.added_on}"
+
+
+class Author(models.Model):
+    """
+    Model for Author
+    """
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    created_on = models.DateTimeField(auto_now_add=True)
+    email = models.EmailField(default="", unique=True)
+    approved = models.BooleanField(default=False)
+    author_image = CloudinaryField("image", default="placeholder")
+
+    def __str__(self):
+        return self.user.username
 

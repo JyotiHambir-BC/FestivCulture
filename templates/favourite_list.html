@@ -8,75 +8,80 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% if favourite_lists|length == 0 %}
-                    <div class="col-12">
-                        <div class="alert alert-info text-center" role="alert">
-                            <h3 class="no-post-tagline">There is no Favourite posts added yet.  <i class="fa-regular fa-face-smile"></i></h3>
-                        </div>
+                <div class="col-12">
+                    <div class="alert alert-info text-center" role="alert">
+                        <h3 class="no-post-tagline">There is no Favourite posts added yet. <i
+                                class="fa-regular fa-face-smile"></i></h3>
                     </div>
+                </div>
                 {% else %}
 
-                
-                    {% for post in favourite_lists %}
-                    <div class="col-md-4">
-                        <div class="card mb-4 h-100">
-                            <div class="card-body">
-                                <div class="image-container">
-                                    {% if post.featured_image and "placeholder" in post.featured_image.url %}
-                                        <img class="card-img-top" src="{% static 'media/homepage-images/eid.jpg' %}" width="100%" alt="placeholder image">
-                                    {% elif post.featured_image %}
-                                        <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
-                                    {% else %}
-                                        <img class="card-img-top" src="{% static 'media/homepage-images/eid.jpg' %}" width="100%" alt="placeholder image">
-                                    {% endif %}
-                                </div>
-                                <a href="{% url 'details_post' post.slug %}" class="post-link">
-                                    <h2 class="card-title text-center">{{ post.title }}</h2>
-                                    <p class="card-text text-justify">{{ post.excerpt }}</p>
-                                </a>
-                                <hr>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item text-left"><strong>When this Festival is Celebrated: </strong> <span>{{ post.best_time }}</span></li>
-                                </ul>
-                                <hr />
-                                <div class="card-footer">
-                                    <span>Author: {{ post.author }} | </span>
-                                    <span>{{ post.created_on }} | </span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> {{ post.number_of_likes }} </span>
-                                    <span class="text-secondary"> | <i class="far fa-comments"></i></span>
-                                </div>
-                               
+                {% for post in favourite_lists %}
+                <div class="col-md-4">
+                    <div class="card mb-4 h-100">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if post.featured_image and "placeholder" in post.featured_image.url %}
+                                <img class="card-img-top" src="{% static 'media/homepage-images/eid.jpg' %}"
+                                    width="100%" alt="placeholder image">
+                                {% elif post.featured_image %}
+                                <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                                {% else %}
+                                <img class="card-img-top" src="{% static 'media/homepage-images/eid.jpg' %}"
+                                    width="100%" alt="placeholder image">
+                                {% endif %}
                             </div>
+                            <a href="{% url 'details_post' post.slug %}" class="post-link">
+                                <h2 class="card-title text-center">{{ post.title }}</h2>
+                                <p class="card-text text-justify">{{ post.excerpt }}</p>
+                            </a>
+                            <hr>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-left"><strong>When this Festival is Celebrated:
+                                    </strong> <span>{{ post.best_time }}</span></li>
+                            </ul>
+                            <hr />
+                            <div class="card-footer">
+                                <span>Author: {{ post.author }} | </span>
+                                <span>{{ post.created_on }} | </span>
+                                <span><i class="fa-solid fa-thumbs-up"></i> {{ post.number_of_likes }} </span>
+                                <strong class="text-secondary">
+                                    <i class="far fa-comments"></i> {{ comment_count }}
+                                </strong>
+                            </div>
+                           <div><span>Added On: {{ post.added_on }} | </span></div>
                         </div>
-                    </div>
-                    
-                    {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                    </div>                    
                 </div>
-                <div class="row">
-                    {% endif %}                    
-                    {% endfor %}
-                    
-                    {% if forloop.last and not forloop.counter|divisibleby:3 %}
-                        </div> <!-- Close the last row if it hasn't been closed -->
-                    {% endif %}
-                {% endif %}
                 
-                
+                {% if forloop.counter|divisibleby:3 and not forloop.last %}
             </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+
+                {% if forloop.last and not forloop.counter|divisibleby:3 %}
+            </div> <!-- Close the last row if it hasn't been closed -->
+            {% endif %}
+            {% endif %}
+
+
         </div>
     </div>
-    
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">PREV &laquo;</a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
+</div>
+
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">PREV &laquo;</a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
 </div>
 
 {% endblock content %}

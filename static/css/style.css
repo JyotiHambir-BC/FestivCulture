@@ -260,8 +260,19 @@ body {
     height: 70vh;
 }
 
-.star {
-    color: yellow;
+.fav-text {
+    color: #fff;
+    text-decoration: none;    
+}
+
+.add-fav-btn {
+    background-color: #E84610;
+    color: #000;
+}
+
+.add-fav-btn:hover {
+    background-color: #188181;
+    
 }
 
 .alert-info {

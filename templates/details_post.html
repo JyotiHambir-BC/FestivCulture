@@ -51,7 +51,7 @@
                 {% if user.is_authenticated %}
                 <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                     {% csrf_token %}
-                    {% if post.number_of_likes > 0 %}  {# Check if the post has any likes #}
+                    {% if post.number_of_likes > 0 %} {# Check if the post has any likes #}
                     <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like">
                         <i class="fa-solid fa-thumbs-up"></i>
                     </button>
@@ -66,30 +66,28 @@
                 {% endif %}
                 <span class="text-secondary"> {{ post.number_of_likes }}</span>
             </strong>
-            
+
         </div>
         {% if user.is_authenticated %}
         <div class="col-md-6 favourite-section">
-            <button id="submitButton" type="submit" class="btn btn-signup btn-lg float-end">Add to Favourite
-
-                {% if is_favourite %}
-                <a href="{% url 'favourite_list' post.slug %}">
-                    <i class="fa-solid fa-star star"></i>
-                </a>
-
-                {% else %}
-                <a href="{% url 'favourite_list' post.slug %}">
-                    <i class="fa-regular fa-star star"></i>
-                </a>
-                {% endif %}
+            <button id="submitButton" type="submit" class="btn btn-signup btn-lg float-end add-fav-btn">
+                {% if is_favourite %}                
+                    <a href="{% url 'favourite_list' post.slug %}" style="text-decoration: none;">
+                        <h4 class="fav-text"> Removed from Favourite </h4>
+                    </a>
+                    {% else %}
+                    <a href="{% url 'favourite_list' post.slug %}" style="text-decoration: none;">
+                       <h4 class="fav-text"> Add to Favourite </h4>
+                    </a>
+                    {% endif %}                
             </button>
             {% else %}
-            <button id="submitButton" type="submit" class="btn btn-signup btn-lg float-end">Please Login to Add in Favourite list                
+            <button id="submitButton" type="submit" class="btn btn-signup btn-lg float-end">Please Login to Add in
+                Favourite list
             </button>
-
             {% endif %}
         </div>
-        
+
 
         <!-- Displaying Comments -->
         <div class="row">

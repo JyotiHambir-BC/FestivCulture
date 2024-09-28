@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from .models import Post, Comment, Favourite
+from .models import Post, Comment, Favourite, Author
 
 
 # Register your models here.
@@ -11,6 +11,16 @@ class PostAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'created_on',)
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content',)
+
+
+@admin.register(Author)
+class AuthorAdmin(admin.ModelAdmin):
+    """
+    Add fields for author in admin panel
+    """
+
+    list_display = ("user", "created_on", "email", "approved")
+    search_fields = ["user"]
 
 
 admin.site.register(Favourite)
