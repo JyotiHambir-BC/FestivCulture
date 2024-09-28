@@ -70,7 +70,7 @@ Please find my Kanban Board with my user stories [here](https://github.com/users
 
 Smart Draw was used to create a database schema to visualise the types of custom models the project requires. This schema was used as a guide to what needed to be added to each model. Below is the Database structure that this project is based on. The relationship between Entities Post and Comment are shown in this diagram.
 
-![ER Diagram](assets/erd_diagram/Image%20of%20ERD.jpg)
+![ER Diagram](assets/erd_diagram/ERD.png)
 
 
 # Features
