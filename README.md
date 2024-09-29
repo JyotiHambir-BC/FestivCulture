@@ -8,6 +8,10 @@
 
 - This Website blog having Festival's brief information and when its celebrated what foods they preparing for make this festival more special.
 
+<hr>
+
+### The live link is available here [FestivCulture](https://festive-culture-18e558f91174.herokuapp.com/)
+
 ## [Content](#content)
 
 
@@ -28,7 +32,7 @@ The Agile Methodology was used to plan this project. This was implemented throug
 * In Progress- (then during development story they were moved into the 'In Progress' column)
 * Done- (and then finally they get moved into 'Done' once the development completes)
 
-Please find my Kanban Board with my user stories [here](https://github.com/users/JyotiHambir-BC/projects/9/views/1)
+Please find my Project Board with my user stories [here](https://github.com/users/JyotiHambir-BC/projects/9/views/1)
 
 ## User Stories
 
