@@ -18,7 +18,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
     featured_image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
+    created_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name="blogpost_likes", blank=True)
     comment_count = models.IntegerField(default=0)
@@ -27,6 +27,7 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     favourite_post = models.ManyToManyField(User, related_name="favourite_post", blank=True)
     added_on = models.DateTimeField(auto_now_add=True)
+    
 
     class meta:
         ordering = ["-created_on", "author"]
@@ -73,8 +74,8 @@ class Favourite(models.Model):
     class Meta:
         ordering = ["-added_on"]
 
-    def __str__(self):
-        return f"Added by {self.author} on {self.added_on}"
+    # def __str__(self):
+    #     return f"Added by {self.author} on {self.added_on}"
 
 
 class Author(models.Model):

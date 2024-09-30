@@ -50,23 +50,21 @@
                                 </strong>
                             </div>
                             <hr>
-                           <div><span><strong>Post Added to Favourite On: {{ post.added_on }} </strong></span></div>
+                            
+                            <div><span><strong>Post Added to Favourite On: {{ post.added_on }} </strong></span></div>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
-                
+
                 {% if forloop.counter|divisibleby:3 and not forloop.last %}
             </div>
             <div class="row">
                 {% endif %}
                 {% endfor %}
-
                 {% if forloop.last and not forloop.counter|divisibleby:3 %}
             </div> <!-- Close the last row if it hasn't been closed -->
             {% endif %}
             {% endif %}
-
-
         </div>
     </div>
 </div>
