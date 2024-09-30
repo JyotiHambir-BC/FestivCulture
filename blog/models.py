@@ -42,7 +42,7 @@ class Post(models.Model):
         return self.comment_count.count()
 
     def __str__(self):
-        return self.added_on()
+        return f"{self.added_on}"
 
 class Comment(models.Model):
     """

@@ -6,7 +6,7 @@ from .models import Post, Comment, Favourite, Author
 # Register your models here.
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
-    list_display = ('title', 'slug', 'status', 'created_on')
+    list_display = ('title', 'slug', 'status', 'created_on', 'updated_on')
     search_fields = ['title', 'content']
     list_filter = ('status', 'created_on',)
     prepopulated_fields = {'slug': ('title',)}

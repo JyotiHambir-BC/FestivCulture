@@ -21,8 +21,9 @@
 
  ## Site Aims
 
-* 
-* 
+* FestivCulture is a website mainly meant to explore the Indian Festivals with a good user experience.
+* This website provides the user with the ability to read and view posts of festivals.
+* All users who sign up and sign in, can access the features of add post, like/unlike and comment on a blog post of this website.
 
  ## Agile Methodology
 
@@ -81,9 +82,10 @@ Smart Draw was used to create a database schema to visualise the types of custom
 
 ## Home Page
 
-At the very first glimpse, user can see a Navigation menu and carousel-images on the homepage. Homepage provides the user with some quick information about the site and make use of all its features. User do not need to be registered to view a blog post. The responsive navigation bar is featured on all pages. 
+At the very first glimpse, user can see a Navigation menu and carousel-images with the captions inside and quote about the festival below the carousel on the homepage. Homepage provides the user with some quick information about the site and make use of all its features. User do not need to be registered to view a blog post. The responsive navigation bar is featured on all pages. 
 
-![Home Page]()
+![Home Page](assets/homepage/homepage1.png)
+![Home Page](assets/homepage/homepage2.png)
 
 ## Navbar
 
@@ -91,17 +93,28 @@ At the very first glimpse, user can see a Navigation menu and carousel-images on
 - The options to Register or Log in will change to the option to log out once a user has logged in.
 - The navbar is fully responsive, collapsing into a hamburger menu when the screen size becomes smaller.
 
-![Navbar]()
+#### Navbar when not logged in :
+
+![Navbar](assets/homepage/navbar_not_loggedIn.png)
+
+#### Navbar when already logged in :
+
+![Navbar](assets/homepage/navbar_sign_in.png)
+
+<hr>
 
 ## Footer
 
 - On the website footer, users can see basic information such as my social media, copyright about FestivCulture Website.
 
+![Footer](assets/homepage/footer.png)
+
 ## About Page
 
-- The About Page gives, users information about the Incredible India with a brief discription of india and the travel options to reach there.
+- The About Page gives, users information about the purpose of celebrating festivals in India with a brief discription of india and the travel options to reach there.
 
-![About us]()
+![About us](assets/aboutPage/aboutPage1.png)
+![About us](assets/aboutPage/aboutPage2.png)
 
 ## Festivals Page
 
