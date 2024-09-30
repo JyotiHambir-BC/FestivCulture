@@ -118,9 +118,17 @@ At the very first glimpse, user can see a Navigation menu and carousel-images wi
 
 ## Festivals Page
 
-- 
+- On a Festival page there is list of all festivals and paginated by 6 posts on the page.
+- Further post can be accessed by clicking next button. Each blog post shows the image overlay with the festival information.
 
-![Festival Page]()
+![Festival Page](assets/festivalPage/festival1.png)
+![Festival Page](assets/festivalPage/festival2.png)
+
+<hr>
+
+- After click on Next Button in the middle page Next and Prev both buttons are available to move-on next page or go on previous page.
+
+![Festival Page](assets/festivalPage/festival3.png)
 
 ## Festivals blog Details Page
 
