@@ -23,6 +23,7 @@ for (let button of editButtons) {
     let commentContent = document.getElementById(`comment${commentId}`).innerText;
     commentText.value = commentContent;
     submitButton.innerText = "Update";
+    //submitButton.href="{% url 'comment_edit' post.slug comment.id %}";
     commentForm.setAttribute("action", `edit_comment/${commentId}`);
   });
 }

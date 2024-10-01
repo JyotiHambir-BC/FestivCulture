@@ -132,13 +132,31 @@ At the very first glimpse, user can see a Navigation menu and carousel-images wi
 
 ## Festivals blog Details Page
 
-- 
+- When a user clicks on the title or text of the blog post, they are brought to the post details page for the selected blog post. Here the user is shown the complete details of the blog post with image, author name, created time, title, when the festival is celebrated, number of likes and comments along with full content.
+- Underneath the post description the page Add to Favourite button is available, so if user like the post he can add that post in his / her favourite list.
+- Below that button displays all the approved comments on that blog post posted by signed-in users. 
+- At the bottom of this page, the Comment box is visible to the users.
 
-![Festival blog details page]()
+![Festival blog details page](assets/festivalPage/post_page1.png)
+![Festival blog details page](assets/festivalPage/post_page2.png)
+![Festival blog details page](assets/festivalPage/post_page3.png)
 
-- If user is signed-in, following comment box will appear. 
 
-![Comment-Box]()
+- If user not signed-in, following button will appear. 
+
+![Add to Favourite Button](assets/festivalPage/if_not_loggedIn.png)
+
+- If user is signed-in, following button will appear. 
+
+![Add to Favourite Button](assets/festivalPage/add_fav_button.png)
+
+- If user is signed-in, and already added the post in Favourite list then following button will appear. 
+
+![Add to Favourite Button](assets/festivalPage/remove_fav_button.png)
+
+- If user is signed-in, following comment box will appear. And user can see there own unapproved comments (if any) or all approved comments posted by different users.
+
+![Comment-Box](assets/festivalPage/after_logIn_comment_view.png)
 
 - When User submit a comment or like/unlike a post, following messages/ alert displays respectively.
 

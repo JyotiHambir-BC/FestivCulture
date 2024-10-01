@@ -21,9 +21,7 @@ def details_post(request, slug):
     comment_count = post.comments.filter(approved=True).count()
     is_favourite = False
 
-    if post.favourite_post.filter(id=request.user.id):
-        is_favourite = True
-
+   
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -36,7 +34,11 @@ def details_post(request, slug):
                 'Comment submitted and waiting for approval'
             )
 
+    
     comment_form = CommentForm()
+
+    if post.favourite_post.filter(id=request.user.id):
+        is_favourite = True
 
     return render(
         request,
@@ -47,8 +49,7 @@ def details_post(request, slug):
         "comment_form": comment_form,
         "is_favourite": is_favourite,
                
-        },
-        
+        },        
     )
 
 def comment_edit(request, slug, comment_id):
