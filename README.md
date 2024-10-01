@@ -141,28 +141,54 @@ At the very first glimpse, user can see a Navigation menu and carousel-images wi
 ![Festival blog details page](assets/festivalPage/post_page2.png)
 ![Festival blog details page](assets/festivalPage/post_page3.png)
 
+-----------------------------------------------------------------------------------------------------------------
+
+#### For Not Signed-In User
 
 - If user not signed-in, following button will appear. 
 
 ![Add to Favourite Button](assets/festivalPage/if_not_loggedIn.png)
 
-- If user is signed-in, following button will appear. 
+-----------------------------------------------------------------------------------------------------------------
+#### For Signed-In User
+
+- If user is signed-in, following button will appear. And if user clicked on this button the added on message will display.
 
 ![Add to Favourite Button](assets/festivalPage/add_fav_button.png)
+![Post added to Favourite list message](assets/message/post_added_msg.png)
 
-- If user is signed-in, and already added the post in Favourite list then following button will appear. 
+
+- If user is signed-in, and already added the post in Favourite list then following button will appear. And if user clicked on this button the removed from message will display.
 
 ![Add to Favourite Button](assets/festivalPage/remove_fav_button.png)
+![Post removed from Favourite list message](assets/message/post_removed_msg.png)
+
+-----------------------------------------------------------------------------------------------------------------
 
 - If user is signed-in, following comment box will appear. And user can see there own unapproved comments (if any) or all approved comments posted by different users.
 
 ![Comment-Box](assets/festivalPage/after_logIn_comment_view.png)
 
-- When User submit a comment or like/unlike a post, following messages/ alert displays respectively.
+* Submitted comment which is waiting for admin approval
 
-![comment-alert]()
-![Like-post-alert]()
-![Unlike-post-alert]()
+![Unapproved-Comment](assets/message/waiting_approva_comment.png)
+
+* Comments which admin have approved already.
+
+![Approved-Comment](assets/message/approved_comment.png)
+
+* When User submit a comment or like/unlike a post, following messages/ alert displays respectively.
+
+![comment-alert](assets/message/comment_sent.png)
+
+* When User like the Post
+![Like-post-alert](assets/message/like_post.png)
+
+* When User unlike the Post
+![Unlike-post-alert](assets/message/unlike_post.png)
+
+* These Comment and Like Icons displaying above the comment box and it shows how many like and approved comments received for the Post from the Users.
+![Icon of Comment and Like](assets/message/comment_like.png)
 
 - Signed-in users can only edit/delete their own comments.
 
@@ -175,6 +201,8 @@ At the very first glimpse, user can see a Navigation menu and carousel-images wi
 - When user clicks on update button, a successful update alert message is displayed.
 
 ![update-comment-alert]()
+
+## My Favourite blog Details Page
 
 ## Security
 In order to properly interact with the website, the user needs to have an account and sign in. This ensures security of their comments and gives them rights to create, modify and delete them.
