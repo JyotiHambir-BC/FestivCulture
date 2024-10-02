@@ -83,7 +83,8 @@
                 {% endif %}
             </button>
             {% else %}
-            <button type="button" class="btn float-end log-btn">Please Login to Add this post in your Favourite list</button>
+            <button type="button" class="btn float-end log-btn">Please login to Add this post in your Favourite list <span class="log-link"><a class="nav-link active log-link" aria-current="page" href="{% url 'account_login' %}"
+                aria-label="Go to the account_login page"><i class="fa-regular fa-hand-point-right"></i> Login here  <i class="fa-regular fa-hand-point-left"></i></a></span></button>
             {% endif %}
         </div>
     </div>

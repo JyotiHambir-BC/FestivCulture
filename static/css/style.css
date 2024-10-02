@@ -166,8 +166,13 @@ body {
 }
 
 .log-btn {
-    background-color: #188181;
+    background-color: #E84610;
     color: #fff;   
+}
+
+.log-link{
+    color: #fff;
+    font-size: large;
 }
 
 .btn-signup,
