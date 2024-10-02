@@ -358,9 +358,11 @@ I used the following validation tools to validate HTML, CSS, PYTHON codes. Below
 * Name our repository and click on `Create repository from template` button.
 * Once the template is available in your repository click on `Gitpod` button.
 * When the image for the template and the Gitpod are ready, open a new terminal to start a new Django App.
-* Install Django and gunicorn: `pip3 install 'django<4' gunicorn`.
+* Install Django and gunicorn: `pip3 install 'django~=4.2.1' gunicorn~=20.1`.
+* Create a Procfile `Procfile has no extension and P should be Capital`.`Add 1 line code web: gunicorn (project-name).wsgi`.
 * Install supporting database libraries dj_database_url and psycopg2 library: `pip3 install dj_database_url==0.5.0 psycopg2`.
 * Install Cloudinary libraries to manage static files: `pip install dj-3-cloudinary-storage`.
+* Install whitenoise to serve the static files: `pip3 install 'whitenoise~=5.3.0'`
 * Create file for requirements: `pip freeze --local > requirements.txt`.
 * Create project:`django-admin startproject project_name .`.
 * Create app: `python manage.py startapp app_name`.
