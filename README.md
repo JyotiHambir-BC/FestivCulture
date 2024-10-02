@@ -1,6 +1,8 @@
 <h1 align="center"> FestivCulture <h1>
 <h2 align="center"> Welcome to the Cultural Festival World of India <h2>
 
+![Mock-up Image](assets/mock-up/Screenshot%202024-10-02%20093000.png)
+
 ## Purpose and Targeted Audience
 - India is having 28 states and each states are Unique in Celebrating Festivals, speaking Languages, having special foods for the every Festival.
 
@@ -33,7 +35,7 @@ The Agile Methodology was used to plan this project. This was implemented throug
 * In Progress- (then during development story they were moved into the 'In Progress' column)
 * Done- (and then finally they get moved into 'Done' once the development completes)
 
-Please find my Project Board with my user stories [here](https://github.com/users/JyotiHambir-BC/projects/9/views/1)
+## Please find my Project Board with my user stories [here](https://github.com/users/JyotiHambir-BC/projects/9/views/1)
 
 ## User Stories
 
@@ -164,6 +166,7 @@ At the very first glimpse, user can see a Navigation menu and carousel-images wi
 ![Post removed from Favourite list message](assets/message/post_removed_msg.png)
 
 -----------------------------------------------------------------------------------------------------------------
+### Blog page Comment Section
 
 - If user is signed-in, following comment box will appear. And user can see there own unapproved comments (if any) or all approved comments posted by different users.
 
@@ -181,6 +184,10 @@ At the very first glimpse, user can see a Navigation menu and carousel-images wi
 
 ![comment-alert](assets/message/comment_sent.png)
 
+-----------------------------------------------------------------------------------------------------------------
+
+### Blog page Like Section
+
 * When User like the Post
 ![Like-post-alert](assets/message/like_post.png)
 
@@ -190,37 +197,63 @@ At the very first glimpse, user can see a Navigation menu and carousel-images wi
 * These Comment and Like Icons displaying above the comment box and it shows how many like and approved comments received for the Post from the Users.
 ![Icon of Comment and Like](assets/message/comment_like.png)
 
+-----------------------------------------------------------------------------------------------------------------
+
 - Signed-in users can only edit/delete their own comments.
 
-![Edit-Delet Button]()
+![Edit-Delet Button](assets/festivalPage/edit_delete_button.png)
 
 - When the user clicks on the delete button to remove his comment, following alert message pops up.
 
-![Delete-comment-alert]()
+![Delete-Prompt-comment-alert](assets/message/delet_prompt_msg.png)
 
-- When user clicks on update button, a successful update alert message is displayed.
+- When the user clicks on the delete button again, following alert message pops up.
 
-![update-comment-alert]()
+![Delete-Confirmation-comment-alert](assets/message/comment_delete_msg.png)
+
+- When user clicks on  Edit button, the existing comment's text appeared in body box to change, if user wants to change / update anything in existing comment. And the Submit button will change into Update button as shown below.
+
+![update-comment-alert](assets/festivalPage/update_text.png)
+
+- When user clicks on update button, a successful update alert message is displayed and the updated comment will show in comments list.
+
+![update-comment-alert](assets/message/comment_update_msg.png)
+
+-----------------------------------------------------------------------------------------------------------------
 
 ## My Favourite blog Details Page
+
+* In this page you can see your added favourite post. When user click on Add to Favourite Button which is below the post, that favourite post is adding to this My Favourite page and also when the post added to that list its also appear bottom of the post. If user remove the post from favourite, it will disappear from this list again.
+
+![Favourite-page](assets/my_fav_page/post.png)
+
+* If there is no post added in My Favourite below message will display when you open the My Favourite App.
+
+![Empty-Favourite-List](assets/my_fav_page/no-postPage.png)
+
+-----------------------------------------------------------------------------------------------------------------
 
 ## Security
 In order to properly interact with the website, the user needs to have an account and sign in. This ensures security of their comments and gives them rights to create, modify and delete them.
 
 ### Sign Up
 
-- User is asked to enter username and password to sign up. User will be guided by validation messages if the username exists or password is too small which was created by modifying Django inbuilt templates.
+- User is asked to enter username and password to sign up. User will be guided by validation messages if the username exists or password is too small which was created by modifying Django inbuilt templates. 
 
-![Signup page]()
+![Signup page](assets/login/register_page.png)
 
 - When users sign up to the website they will see a message at the top of the page saying "Successfully signed in as (username)".
-![Sign Up alert]()
+![Sign Up alert](assets/login/register_msg.png)
 
 ### Sign In
 
+- The Sign In page will display when User will click on login page
+
+![Sign-In](assets/login/login_page.png)
+
 - User can enter username and password to sign in. User will be guided by validation messages if the username or password is not correct. This was created by modifying Django inbuilt templates.
 
-![Sign In page]()
+![Sign In page](assets/login/icorrect_login_details.png)
 
 - When users sign in to the website they will see a message at the top of the page saying "Successfully signed in as (username)".
 
