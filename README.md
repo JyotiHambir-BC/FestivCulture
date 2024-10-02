@@ -257,21 +257,23 @@ In order to properly interact with the website, the user needs to have an accoun
 
 - When users sign in to the website they will see a message at the top of the page saying "Successfully signed in as (username)".
 
-![Sign In alert]()
+![Sign In alert](assets/login/register_msg.png)
 
 ### Sign Out
 
 - If the user is signed-in, then only they can see Logout nav-item in navbar. User will be taken to the Sign Out page. This was created by modifying Django inbuilt templates. When the user signs out, they are redirected to homepage.
 
-![Sign out page]()
+![Sign out page](assets/sign_out/confirm_signout.png)
 
 - When users log out of the website they will see a message at the top of the page saying "You have signed out".
 
-![Sign out alert]()
+![Sign out alert](assets/sign_out/sign-out-msg.png)
+
+-----------------------------------------------------------------------------------------------------------------
 
 ## Admin Panel/Superuser
 
-- Admin accesses the project via logging into Django admin panel with a superuser id and password. The page appears as shown [here]().
+- Admin accesses the project via logging into Django admin panel with a superuser id and password. The page appears as shown [here](assets/admin-panel/admin_panel_homepage.png)
 - A superuser "admin" was created for this project to manage the admin panel.
 - On the Admin Panel, as an admin I have full access to CRUD functionality so I can view, create, edit and delete the following ones:
   - Posts
@@ -282,17 +284,27 @@ In order to properly interact with the website, the user needs to have an accoun
 ### Admin 'Post' Model Management
 
 - On selecting Blog "Post", a list of blog posts is displayed with its title, slug, status, created_on and author name. Admin can select the post and edit or delete its data.
-- When a blog post is submitted by a user, its status is set to Draft by default.
 - When the status is set to Publish on Admin Approval, the post starts appearing in the website.
 
-The admin site for post model appears as shown [here]().
+`The admin site for post model appears as shown` [here](assets/admin-panel/post_model.png).
 
 ### Admin 'Comment' Model Management
 
 - Upon selecting the Blog "Comment" model, a list of comments on a post is displayed with the username, comment body, post title, status and created_on. Admin can select the comment and edit or delete its data.
+
+`The admin site all comments list appears as shown` [here](assets/admin-panel/comment_model.png).
+
 - When a comment is submitted by a user, it requires approval from an admin in order to publish it on the comments section.
 
-The admin site for comment model appears as shown [here]().
+`The admin site for comment model approval appears as shown` [here](assets/admin-panel/comment_approve.png).
+
+### Admin 'Author' Model Management
+
+- Upon selecting the Blog "Author" model, a list of Author on a post is displayed with the username, Email, Approved, Image. Admin can select the User for add it as author and update a picture for his profile and edit or delete its data.
+
+`The admin site for Author model appears as shown` [here](assets/admin-panel/add_author.png)
+
+-----------------------------------------------------------------------------------------------------------------
 
 ## Technologies Used
 
