@@ -14,10 +14,12 @@
 
 ### The live link is available here [FestivCulture](https://festive-culture-18e558f91174.herokuapp.com/)
 
+-----------------------------------------------------------------------------------------------------------------
+
 ## [Content](#content)
 
 
- -----
+-----------------------------------------------------------------------------------------------------------------
 
  # User Experience - UX
 
@@ -47,9 +49,11 @@ The Agile Methodology was used to plan this project. This was implemented throug
 ### Typography
 
 * Fonts were imported using Google Fonts. Poppins was used throughout with a backup of sans-serif. It was chosen for easy readability for users.
-* Protest Guerrilla font was used for website name **"FestivCulture"**
+- Protest Guerrilla font was used for website name **"FestivCulture"**
 
-### Imagery
+![Logo](assets/logo/logo.png)
+
+-----------------------------------------------------------------------------------------------------------------
 
 ### Wireframes
 
@@ -354,7 +358,15 @@ In order to properly interact with the website, the user needs to have an accoun
 * [Google Fonts:](https://fonts.google.com/) used for the Poppins and Protest Guerrilla font
 * [Font Awesome:](https://fontawesome.com/) was used to add icons for aesthetic and UX purposes.
 
+-----------------------------------------------------------------------------------------------------------------
+
 ## Testing
+
+### Manual Testing:
+
+[Manual Testing Report]()
+
+-----------------------------------------------------------------------------------------------------------------
 
 ### Validation
 I used the following validation tools to validate HTML, CSS, PYTHON codes. Below the link of TESTING.md file, which includes all validation results.  
@@ -362,9 +374,21 @@ I used the following validation tools to validate HTML, CSS, PYTHON codes. Below
 - CSS using [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/)
 - Python via [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
 
+-----------------------------------------------------------------------------------------------------------------
+
 ## Bugs
 
+| **Unfix Bug** |
+| ----------- | 
+| When a logged in user adds a post in there favourite list, on My Favourite page the post is adding but the Post added on favourite date shows incorrect and same for all added post in favourite list.<br><details><summary>My Favourite Page Screenshot</summary><img src="assets/bug/wrong_date.png"></details> 
+
+
+-----------------------------------------------------------------------------------------------------------------
+
 ## Future Implementation
+* Search Bar on top-right side of website to search the information or blog.
+
+-----------------------------------------------------------------------------------------------------------------
 
 ## Deployment
 
@@ -415,18 +439,29 @@ In the IDE:
 * Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku. 
 * To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
 
-----
+-----------------------------------------------------------------------------------------------------------------
 
 # Credits
 
 ## Code
+- The basic set up of the website was done by strictly following the steps as described in Code Institue Full Stack Frameworks module - Django walkthrough project `"I Think Therefore I Blog"`.
+- [Incredible India](https://github.com/jyotiyadav2508/Blog_Website_PP4)- One of the project shared by my cohort facilitator on Slack. 
 
 ## Learning Resources
+- Code Institutes Full Stack Framework Module, mainly the 'blog' walkthrough project.
+- [W3CSchool](https://www.w3schools.com/django/)
+- Other open source to understand and solve different types of error : ChatGPT, Stack Overflow
+- Taken idea of add post in favourite list from youtube videos by [Abhishek Verma](https://www.youtube.com/watch?v=1XiJvIuvqhs)
 
 ## Content and Media
 
-## Acknowledgement
+All images and post content are taken from the [google](https://www.google.com/) 
 
+
+## Acknowledgement
+Special thanks to my facilitator Elaine Roche, My fellow students Laura and Simmi, Coading Coach Ruairidh MacArthur and John Rearden and Slack community for their assistance throughout this project.
+
+-----------------------------------------------------------------------------------------------------------------
 
 [Back to top](<>)
    
