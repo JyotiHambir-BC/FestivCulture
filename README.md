@@ -377,6 +377,38 @@ I used the following validation tools to validate HTML, CSS, PYTHON codes. Below
 
 ### Validation Report
 
+| **Homepage HTML Validation** |
+| ----------- | 
+| <details><summary>Homepage HTML Validation</summary><img src="assets/documentations/html_validation/homepage-html.png"></details> 
+
+| **About-page HTML Validation** |
+| ----------- | 
+| Two Errors has found in validation report which was checked but it is present in Summernote App, which not able to correct in html file.<details><summary>Aboutpage HTML Validation</summary><img src="assets/documentations/html_validation/about-html.png"></details> 
+
+| **Festival-page HTML Validation** |
+| ----------- | 
+| <details><summary>Festival-page HTML Validation</summary><img src="assets/documentations/html_validation/festival-html.png"></details> 
+
+| **Individual Blog Page HTML Validation** |
+| ----------- | 
+| There are 29 Errors and 1 warning found during validation which is again belongs to Summernote App, which can't be fixed in html page in gitpod <details><summary>Individual Blog Page HTML Validation</summary><img src="assets/documentations/html_validation/individual_blog-page.png"></details> 
+
+| **My Favourite Page HTML Validation** |
+| ----------- | 
+| <details><summary>My Favourite Page HTML Validation</summary><img src="assets/documentations/html_validation/my-fav-html.png"></details> 
+
+| **Register Page HTML Validation** |
+| ----------- | 
+| Four Errors found during the validation which are belongs in allauth app installation, not changed any html file related to authentication. <details><summary>Homepage HTML Validation</summary><img src="assets/documentations/html_validation/register-page.png"></details> 
+
+| **Login Page HTML Validation** |
+| ----------- | 
+| <details><summary>Homepage HTML Validation</summary><img src="assets/documentations/html_validation/login-page.png"></details> 
+
+| **CSS Validation** |
+| ----------- | 
+| <details><summary>CSS Stylesheet Validation</summary><img src="assets/documentations/css_validation/css validation.png"></details> 
+
 -----------------------------------------------------------------------------------------------------------------
 
 ## Bugs
