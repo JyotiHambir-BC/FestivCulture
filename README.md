@@ -39,8 +39,11 @@ The Agile Methodology was used to plan this project. This was implemented throug
 
 ## Please find my Project Board with my user stories [here](https://github.com/users/JyotiHambir-BC/projects/9/views/1)
 
+-----------------------------------------------------------------------------------------------------------------
+
 ## User Stories
 
+-----------------------------------------------------------------------------------------------------------------
 
 ## Design
 
@@ -399,11 +402,11 @@ I used the following validation tools to validate HTML, CSS, PYTHON codes. Below
 
 | **Register Page HTML Validation** |
 | ----------- | 
-| Four Errors found during the validation which are belongs in allauth app installation, not changed any html file related to authentication. <details><summary>Homepage HTML Validation</summary><img src="assets/documentations/html_validation/register-page.png"></details> 
+| Four Errors found during the validation which are belongs in allauth app installation, not changed any html file related to authentication. <details><summary>Register Page HTML Validation</summary><img src="assets/documentations/html_validation/register-page.png"></details> 
 
 | **Login Page HTML Validation** |
 | ----------- | 
-| <details><summary>Homepage HTML Validation</summary><img src="assets/documentations/html_validation/login-page.png"></details> 
+| <details><summary>Login Page HTML Validation</summary><img src="assets/documentations/html_validation/login-page.png"></details> 
 
 | **CSS Validation** |
 | ----------- | 
@@ -428,7 +431,7 @@ I used the following validation tools to validate HTML, CSS, PYTHON codes. Below
 ## Deployment
 
 ### 1. Creating the Django Project
-* Go to the Code Institute Gitpod Full Template [Template](https://github.com/Code-Institute-Org/gitpod-full-template).
+* Go to the Code Institute Gitpod Full Template [ci-full-template](https://github.com/Code-Institute-Org/ci-full-template).
 * Click on `Use This Template` button, then create new repository.
 * Name our repository and click on `Create repository from template` button.
 * Once the template is available in your repository click on `Gitpod` button.
