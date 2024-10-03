@@ -8,7 +8,13 @@ urlpatterns = [
     path('favourite/', views.view_favourite_list, name='view_favourite_list'),
     path('favourite/<slug:slug>', views.favourite_list, name='favourite_list'),
     path('<slug:slug>/', views.details_post, name='details_post'),
-    path('<slug:slug>/edit_comment/<int:comment_id>', views.comment_edit, name='comment_edit'),
-    path('<slug:slug>/delete_comment/<int:comment_id>', views.comment_delete, name='comment_delete'),
+    path(
+        '<slug:slug>/edit_comment/<int:comment_id>',
+        views.comment_edit,
+        name='comment_edit'
+    ),
+    path(
+        '<slug:slug>/delete_comment/<int:comment_id>',
+        views.comment_delete, name='comment_delete'),
 
 ]

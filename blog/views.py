@@ -48,10 +48,10 @@ def details_post(request, slug):
         request,
         "details_post.html",
         {"post": post,
-        "comments": comments,
-        "comment_count": comment_count,
-        "comment_form": comment_form,
-        "is_favourite": is_favourite, },
+            "comments": comments,
+            "comment_count": comment_count,
+            "comment_form": comment_form,
+            "is_favourite": is_favourite, },
         )
 
 
@@ -72,7 +72,8 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error Updating Comments')
+            messages.add_message(
+                    request, messages.ERROR, 'Error Updating Comments')
 
     return HttpResponseRedirect(reverse('details_post', args=[slug]))
 
@@ -94,7 +95,8 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse("details_post", args=[slug]))
 
@@ -120,16 +122,20 @@ class PostLike(View):
 
 def favourite_list(request, slug):
     """
-    Add/remove the blogs on My Favourite page when click/unclick the add to favourite/remove from favourite buttom below the blog page.
+    Add/remove the blogs on My Favourite page when
+    click/unclick the add to favourite/remove from
+    favourite buttom below the blog page.
     """
     post = get_object_or_404(Post, slug=slug)
 
     if post.favourite_post.filter(id=request.user.id).exists():
         post.favourite_post.remove(request.user)
-        messages.success(request, "You have removed this Post from your Favourite List.")
+        messages.success(
+            request, "You have removed this Post from your Favourite List.")
     else:
         post.favourite_post.add(request.user)
-        messages.success(request, "You have added this Post in your Favourite List.")
+        messages.success(
+            request, "You have added this Post in your Favourite List.")
 
     return HttpResponseRedirect(reverse("details_post", args=[slug]))
 
