@@ -57,21 +57,37 @@ The Agile Methodology was used to plan this project. This was implemented throug
 
 ![Home Page](assets/wireframe/homepage.png)
 
+<hr>
+
 **About Page**
 
 ![About Page](assets/wireframe/about%20page.png)
+
+<hr>
 
 **Festivals Page**
 
 ![Festivals Page](assets/wireframe/festivals%20page.png)
 
+<hr>
+
 **Festivals Blog Page**
 
 ![Festivals Blog Page](assets/wireframe/festivals%20blog%20page.png)
 
+<hr>
+
+**My Favourite Page**
+
+![My Favourite Page](assets/wireframe/my-fav-page.png)
+
+<hr>
+
 **Register Page**
 
 ![Register Page](assets/wireframe/register%20page.png)
+
+<hr>
 
 ### Database Diagram
 
@@ -147,7 +163,7 @@ At the very first glimpse, user can see a Navigation menu and carousel-images wi
 
 #### For Not Signed-In User
 
-- If user not signed-in, following button will appear. 
+- If user not signed-in, following button will appear. It also have the login link attached under "Login here", so user can directly navigate to the Sign-In page. 
 
 ![Add to Favourite Button](assets/festivalPage/if_not_loggedIn.png)
 
