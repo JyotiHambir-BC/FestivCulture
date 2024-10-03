@@ -133,10 +133,6 @@ body {
     z-index: 100;
 }
 
-.about-row {
-    box-shadow: #1f1f43;
-}
-
 .profile_image {
     width: 100%;
     margin-bottom: 50px;
@@ -240,8 +236,7 @@ body {
 
 .month-display {
     padding: 15px;
-    margin-bottom: 15px;
-    text-shadow: #000;
+    margin-bottom: 15px;    
     letter-spacing: 2px;
     font-size: 25px;
     font-family: Ribeye Marrow, sans-serif;
@@ -272,7 +267,10 @@ body {
 
 .fav-text {
     color: #fff;
-    text-decoration: none;    
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
 .add-fav-btn {

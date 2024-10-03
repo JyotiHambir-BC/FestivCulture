@@ -374,13 +374,16 @@ I used the following validation tools to validate HTML, CSS, PYTHON codes. Below
 - CSS using [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/)
 - Python via [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
 
+
+### Validation Report
+
 -----------------------------------------------------------------------------------------------------------------
 
 ## Bugs
 
 | **Unfix Bug** |
 | ----------- | 
-| When a logged in user adds a post in there favourite list, on My Favourite page the post is adding but the Post added on favourite date shows incorrect and same for all added post in favourite list.<br><details><summary>My Favourite Page Screenshot</summary><img src="assets/bug/wrong_date.png"></details> 
+| When a logged in user adds a post in there favourite list, on My Favourite page the post is adding but the Post added on favourite date shows incorrect and same for all added post in favourite list.<br><details><summary>My Favourite Page Screenshot</summary><img src="assets/documentations/bug/wrong_date.png"></details> 
 
 
 -----------------------------------------------------------------------------------------------------------------

@@ -6,6 +6,8 @@ from .models import Post, Comment, Favourite
 from .forms import CommentForm
 
 # Create your views here.
+
+
 class AllFestivals(generic.ListView):
     """
     Display the blogs in list on festival page.
@@ -14,14 +16,17 @@ class AllFestivals(generic.ListView):
     template_name = "festival.html"
     paginate_by = 6
 
+
 def details_post(request, slug):
+    """
+    Display the blog in detail when click on the title or text below the title.
+    """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
     is_favourite = False
 
-   
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -30,11 +35,10 @@ def details_post(request, slug):
             comment.post = post
             comment.save()
             messages.add_message(
-                request, messages.SUCCESS, 
+                request, messages.SUCCESS,
                 'Comment submitted and waiting for approval'
             )
 
-    
     comment_form = CommentForm()
 
     if post.favourite_post.filter(id=request.user.id):
@@ -47,36 +51,36 @@ def details_post(request, slug):
         "comments": comments,
         "comment_count": comment_count,
         "comment_form": comment_form,
-        "is_favourite": is_favourite,
-               
-        },        
-    )
+        "is_favourite": is_favourite, },
+        )
+
 
 def comment_edit(request, slug, comment_id):
     """
     Edit the single comment which have already submitted.
     """
     if request.method == "POST":
-            queryset = Post.objects.filter(status=1)
-            post = get_object_or_404(queryset, slug=slug)
-            comment = get_object_or_404(Comment, pk=comment_id)
-            comment_form = CommentForm(data=request.POST, instance=comment)
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comment = get_object_or_404(Comment, pk=comment_id)
+        comment_form = CommentForm(data=request.POST, instance=comment)
 
-            if comment_form.is_valid() and comment.author == request.user:
-                comment = comment_form.save(commit=False)
-                comment.post = post
-                comment.approved = False
-                comment.save()
-                messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
-            else:
-                messages.add_message(request, messages.ERROR, 'Error Updating Comments')
+        if comment_form.is_valid() and comment.author == request.user:
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.approved = False
+            comment.save()
+            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error Updating Comments')
 
     return HttpResponseRedirect(reverse('details_post', args=[slug]))
+
 
 def comment_delete(request, slug, comment_id):
     """
     view to delete comment
-    
+
     ``post``
         An instance of :model:`blog.Post`.
     ``comment``
@@ -94,7 +98,9 @@ def comment_delete(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse("details_post", args=[slug]))
 
+
 class PostLike(View):
+
     """
     When a post is liked/unliked, the slug is noted
     and the like/unlike is counted. Total likes display
@@ -113,6 +119,9 @@ class PostLike(View):
 
 
 def favourite_list(request, slug):
+    """
+    Add/remove the blogs on My Favourite page when click/unclick the add to favourite/remove from favourite buttom below the blog page.
+    """
     post = get_object_or_404(Post, slug=slug)
 
     if post.favourite_post.filter(id=request.user.id).exists():
@@ -127,7 +136,7 @@ def favourite_list(request, slug):
 
 def view_favourite_list(request):
     """
-    View all selected favourite posts in favourite list on different page
+    View all selected favourite posts in favourite list on My Favourite page
     """
     user = request.user
     favourite_lists = user.favourite_post.all()
@@ -135,10 +144,3 @@ def view_favourite_list(request):
         "favourite_lists": favourite_lists,
     }
     return render(request, "favourite_list.html", context)
-
-
-
-
-
-
-   

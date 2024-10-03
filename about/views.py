@@ -3,6 +3,8 @@ from django.contrib import messages
 from .models import About
 
 # Create your views here.
+
+
 def about(request):
     about = About.objects.all().order_by('-updated_on').first()
 
@@ -12,4 +14,3 @@ def about(request):
             "about": about,
         },
     )
-    

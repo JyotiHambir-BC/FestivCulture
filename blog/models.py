@@ -9,6 +9,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
 
+
 class Post(models.Model):
     """
     Stores a single blog post entry related to :model: `auth.user`.
@@ -27,14 +28,13 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     favourite_post = models.ManyToManyField(User, related_name="favourite_post", blank=True)
     added_on = models.DateTimeField(auto_now_add=True)
-    
 
     class meta:
         ordering = ["-created_on", "author"]
-    
+
     def __str__(self):
         return f"{self.title} | written by {self.author}"
-    
+
     def number_of_likes(self):
         return self.likes.count()
 
@@ -44,33 +44,34 @@ class Post(models.Model):
     def __str__(self):
         return f"{self.added_on}"
 
+
 class Comment(models.Model):
     """
-    Stores a single blog's comment add request. 
+    Stores a single blog's comment add request.
+
     """
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now=True)
-  
+
     class Meta:
         ordering = ["-created_on"]
 
-    
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
 
 
 class Favourite(models.Model):
     """
-    Stores a single blog's in favourite list. 
+    Stores a single blog's in favourite list.
     """
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="Favourite_Post")
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="Added_By")
     Comment = models.TextField()
     added_on = models.DateTimeField(auto_now_add=True)
-  
+
     class Meta:
         ordering = ["-added_on"]
 
@@ -90,4 +91,3 @@ class Author(models.Model):
 
     def __str__(self):
         return self.user.username
-
