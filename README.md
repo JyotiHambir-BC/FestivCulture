@@ -390,7 +390,9 @@ In order to properly interact with the website, the user needs to have an accoun
 
 ### Manual Testing:
 
-[Manual Testing Report]()
+Testing has taken place continuously throughout the development of the project. Each view was tested regularly.
+
+[Manual Testing Report](assets/documentations/manual_test/Manual%20tests.png)
 
 -----------------------------------------------------------------------------------------------------------------
 
