@@ -43,6 +43,27 @@ The Agile Methodology was used to plan this project. This was implemented throug
 
 ## User Stories
 
+#### For Admin
+* As a site admin, I can create draft posts so that I can finish writing the content later.
+* As a site admin/author, I can create, read, update and delete (CRUD) posts to manage the blog content.
+* As a site admin, I can delete any comment or have authority to approve the comments posted by registered user so that I can filter out objectionable comments.
+* As a author, I can access all my blog posts easily in one place so that I can easily track my activity on the site.
+
+#### For Visitor of website
+* As a site visitor I can easily see the purpose of the site from the landing page so that I can see if the site is relevant to my needs.
+* As a site visitor I can view a list of festivals so that I can see the available festival blogs.
+* As a site visitor I can view a paginated list of posts so that easily select a post to view.
+* As a site visitor I can click on a post so that I can read the full article.
+* As a site visitor, I can view comments on an individual post so that I can read the conversation.
+* As a site visitor, I can view the number of likes on each post so that I can see which is the most favourite festival blog or viral blog.
+* As a site Visitor, I can register an account so that I can comment and like.
+
+#### For Registered / logged-in Users
+* As a registered user, I can login and logout of the site so that I can access my content.
+* As a logged-in user I can leave comments on a post so that I can be involved in the conversation.
+* As a logged-in user I can edit/delete my comments so that I can update/delete my post opinion.
+* As a logged-in user I can like or unlike a post so that I can interact with the content.
+
 -----------------------------------------------------------------------------------------------------------------
 
 ## Design
