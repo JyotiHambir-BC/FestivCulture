@@ -302,3 +302,14 @@ body {
     font-weight: 500;
     font-size: 20px;
 }
+
+.link-text {
+    color: #fff;
+    opacity: 0.9;
+}
+
+.link-text:hover {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}

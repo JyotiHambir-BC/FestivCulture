@@ -37,7 +37,7 @@ The Agile Methodology was used to plan this project. This was implemented throug
 * In Progress- (then during development story they were moved into the 'In Progress' column)
 * Done- (and then finally they get moved into 'Done' once the development completes)
 
-## Please find my Project Board with my user stories [here](https://github.com/users/JyotiHambir-BC/projects/9/views/1)
+### Please find my Project Board with my user stories [here](https://github.com/users/JyotiHambir-BC/projects/9/views/1)
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -72,8 +72,10 @@ The Agile Methodology was used to plan this project. This was implemented throug
 
 ### Typography
 
-* Fonts were imported using Google Fonts. Poppins was used throughout with a backup of sans-serif. It was chosen for easy readability for users.
-- Protest Guerrilla font was used for website name **"FestivCulture"**
+- Fonts were imported using Google Fonts. 
+  - **Poppins** was used throughout with a backup of **sans-serif**. It was chosen for easy readability for users.
+  - **Merriweather** font used for quotes written on homepage below the carousel to give different style than normal fonts.
+  - **Protest Guerrilla** font was used for website name **"FestivCulture"** to make it stylish.
 
 ![Logo](assets/logo/logo.png)
 
