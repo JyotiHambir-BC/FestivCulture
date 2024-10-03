@@ -27,7 +27,7 @@
 
 * FestivCulture is a website mainly meant to explore the Indian Festivals with a good user experience.
 * This website provides the user with the ability to read and view posts of festivals.
-* All users who sign up and sign in, can access the features of add post, like/unlike and comment on a blog post of this website.
+* All users who sign up and sign in, can access the features of all posts, can add them in there personal favourite list, like/unlike and comment on a blog post of this website.
 
  ## Agile Methodology
 
