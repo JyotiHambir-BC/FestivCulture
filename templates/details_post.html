@@ -12,7 +12,11 @@
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
+                {% if "placeholder" in post.featured_image.url %}
+                <img class="card-img" src="{% static 'media/default-image/default-img.png' %}" width="100%">
+                {% else %}
                 <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                {% endif %}
             </div>
         </div>
     </div>
@@ -46,24 +50,24 @@
                 <i class="far fa-comments"></i> {{ comment_count }}
             </strong>
 
-            <!--Displaying total likes-->            
-                {% if user.is_authenticated %}
-                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                    {% csrf_token %}
-                    {% if post.number_of_likes > 0 %} {# Check if the post has any likes #}
-                    <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                    </button>
-                    {% else %}
-                    <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like">
-                        <i class="fa-regular fa-thumbs-up"></i>
-                    </button>
-                    {% endif %}
-                </form>
+            <!--Displaying total likes-->
+            {% if user.is_authenticated %}
+            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                {% csrf_token %}
+                {% if post.number_of_likes > 0 %} {# Check if the post has any likes #}
+                <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                </button>
                 {% else %}
-                <span class="text-secondary"><i class="fa-regular fa-thumbs-up"></i></span>
+                <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                </button>
                 {% endif %}
-                <span class="text-secondary"> {{ post.number_of_likes }}</span>            
+            </form>
+            {% else %}
+            <span class="text-secondary"><i class="fa-regular fa-thumbs-up"></i></span>
+            {% endif %}
+            <span class="text-secondary"> {{ post.number_of_likes }}</span>
         </div>
 
         <!--Displaying Favourite Button-->
@@ -81,8 +85,11 @@
                 {% endif %}
             </div>
             {% else %}
-            <button type="button" class="btn float-end log-btn">Please login to Add this post in your Favourite list <span class="log-link"><a class="nav-link active log-link" aria-current="page" href="{% url 'account_login' %}"
-                aria-label="Go to the account_login page"><i class="fa-regular fa-hand-point-right"></i> Login here  <i class="fa-regular fa-hand-point-left"></i></a></span></button>
+            <button type="button" class="btn float-end log-btn">Please login to Add this post in your Favourite list
+                <span class="log-link"><a class="nav-link active log-link" aria-current="page"
+                        href="{% url 'account_login' %}" aria-label="Go to the account_login page"><i
+                            class="fa-regular fa-hand-point-right"></i> Login here <i
+                            class="fa-regular fa-hand-point-left"></i></a></span></button>
             {% endif %}
         </div>
     </div>

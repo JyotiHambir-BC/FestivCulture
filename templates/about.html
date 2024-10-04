@@ -7,7 +7,11 @@
     <div class="container mt-5">
         <div class="row about-row">
             <div class="col-12 col-md-6 text-center">
+                {% if "placeholder" in about.profile_image.url %}
+                <img class="card-img" src="{% static 'media/default-image/default-img.png' %}" width="100%">
+                {% else %}
                 <img src="{{about.profile_image.url}}" class="profile_image" alt="Festival-Collage">
+                {% endif %}
             </div>
             <div class="col-12 col-md-6 text-center">
                 <h2>{{about.title}}</h2>

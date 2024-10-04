@@ -81,6 +81,13 @@ The Agile Methodology was used to plan this project. This was implemented throug
 
 -----------------------------------------------------------------------------------------------------------------
 
+### Imagery
+
+* All the added images in festivals blogs and About page are taken from Google and uploaded by Admin via Admin Panel.
+Default image also set for these blogs and about page, if no image uploaded by Admin/Author when posted a blog.
+
+-----------------------------------------------------------------------------------------------------------------
+
 ### Wireframes
 
 **Homepage**
@@ -518,7 +525,7 @@ In the IDE:
 
 ## Content and Media
 
-All images and post content are taken from the [google](https://www.google.com/) 
+All images and post content are taken from the [google](https://www.google.com/search?sca_esv=d48fcc0fc18d8628&rlz=1C1CHBF_enGB1125GB1125&sxsrf=ADLYWIINrTTNC86lbltlpSGsQIcdXZMQEw:1728029356412&q=indian+festivals+celebration+information&udm=2&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkWd8nbOJfsBGGB5IQQO6L3J5MIFhvnvU242yFxzEEp3BcbXWGQjBp6XyyqfUu6Wz8hhClm-XLh0MrkVdZRZIb1tDN85Hu7JjwJZYSVOmzHOT7s_qMZXV-Qr0zdnVvAyGGIKM4oPPacutpZcdLFQqMKi8RzYR842wSoR0Aq3Tgd4c7txK2F&sa=X&ved=2ahUKEwjL8Mz_ovSIAxV2T0EAHZk0CD0QtKgLegQIFxAB&biw=1536&bih=695&dpr=1.25) 
 
 
 ## Acknowledgement
