@@ -1,5 +1,5 @@
 ---
-name: Homepage User Stories
+name: FestivCulture User Stories
 about: Describe this issue template's purpose here.
 title: ''
 labels: ''
