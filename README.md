@@ -65,8 +65,6 @@
   - [Final Deployment](#4-final-deployment) 
 - [Credits](#credits)
 
-
-
 -----------------------------------------------------------------------------------------------------------------
 
  # User Experience - UX
@@ -182,7 +180,7 @@ Smart Draw was used to create a database schema to visualise the types of custom
 
 ![ER Diagram](assets/erd_diagram/ERD.png)
 
-[Back to top ⇧](#content)
+[Back to top ⇧](#purpose-and-targeted-audience)
 
 -----------------------------------------------------------------------------------------------------------------
 
