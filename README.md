@@ -172,6 +172,12 @@ Default image also set for these blogs and about page, if no image uploaded by A
 
 <hr>
 
+**Login Page**
+
+![Login Page](assets/wireframe/login-page.png)
+
+<hr>
+
 -----------------------------------------------------------------------------------------------------------------
 
 ### Database Diagram
