@@ -17,6 +17,54 @@
 -----------------------------------------------------------------------------------------------------------------
 
 ## [Content](#content)
+- [Purpose of Website](#purpose-and-targeted-audience)
+- [Website Link](https://festive-culture-18e558f91174.herokuapp.com/)
+- [User experience](#user-experience---ux)
+- [Agile Project Board](https://github.com/users/JyotiHambir-BC/projects/9/views/1)
+- [User Stories](#user-stories)
+- [Typography](#typography)
+- [Imagery](#imagery)
+- [All Wireframes](#wireframes)
+- [Database Diagram](#database-diagram)
+- [Features](#features)
+  - [Home Page](#home-page)
+  - [Navbar](#navbar)
+    - [Navbar for site visitor](#navbar-when-not-logged-in-)
+    - [Navbar for Signed In User](#navbar-when-already-logged-in-)
+  - [Footer](#footer) 
+  - [About Page](#about-page)
+  - [Festivals Page](#festivals-page)
+  - [Festivals blog Details Page](#festivals-blog-details-page)
+    - [For site visitor](#for-not-signed-in-user)
+    - [For Signed In User](#for-signed-in-user)
+  - [Blog page Comment Section](#blog-page-comment-section)
+  - [Blog page Like Section](#blog-page-like-section)
+  - [My Favourite blog Details Page](#my-favourite-blog-details-page)
+  - [Security](#security)
+    - [Sign Up](#sign-up)
+    - [Sign In](#sign-in)
+    - [Sign Out](#sign-out)
+- [Admin Panel](#admin-panelsuperuser)
+  - [Post Model](#admin-post-model-management)
+  - [Comment Model](#admin-comment-model-management)
+  - [Author Model](#admin-author-model-management)
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages-used)
+  - [Django Packages](#django-packages)
+  - [Framework, Liabraries](#frameworks---libraries---programs-used) 
+- [Testing](#testing)
+  - [Manual Testing](#manual-testing)
+  - [Validation](#validation)
+  - [Validation Report](#validation-report)
+- [Bugs](#bugs)
+- [Future Implementation](#future-implementation)
+- [Deployment](#deployment)
+  - [Creating the Django Project](#1-creating-the-django-project)
+  - [Creating the Heroku app](#2-create-your-heroku-app)
+  - [Heroku Deployment](#3-heroku-deployment)
+  - [Final Deployment](#4-final-deployment) 
+- [Credits](#credits)
+
 
 
 -----------------------------------------------------------------------------------------------------------------
@@ -126,12 +174,17 @@ Default image also set for these blogs and about page, if no image uploaded by A
 
 <hr>
 
+-----------------------------------------------------------------------------------------------------------------
+
 ### Database Diagram
 
 Smart Draw was used to create a database schema to visualise the types of custom models the project requires. This schema was used as a guide to what needed to be added to each model. Below is the Database structure that this project is based on. The relationship between Entities Post and Comment are shown in this diagram.
 
 ![ER Diagram](assets/erd_diagram/ERD.png)
 
+[Back to top ⇧](#content)
+
+-----------------------------------------------------------------------------------------------------------------
 
 # Features
 
@@ -324,6 +377,8 @@ In order to properly interact with the website, the user needs to have an accoun
 
 -----------------------------------------------------------------------------------------------------------------
 
+[Back to top ⇧](#content)
+
 ## Admin Panel/Superuser
 
 - Admin accesses the project via logging into Django admin panel with a superuser id and password. The page appears as shown [here](assets/admin-panel/admin_panel_homepage.png)
@@ -446,6 +501,8 @@ I used the following validation tools to validate HTML, CSS, PYTHON codes. Below
 
 -----------------------------------------------------------------------------------------------------------------
 
+[Back to top ⇧](#content)
+
 ## Bugs
 
 | **Unfix Bug** |
@@ -462,7 +519,7 @@ I used the following validation tools to validate HTML, CSS, PYTHON codes. Below
 
 ## Deployment
 
-### 1. Creating the Django Project
+### 1. Creating the Django Project:
 * Go to the Code Institute Gitpod Full Template [ci-full-template](https://github.com/Code-Institute-Org/ci-full-template).
 * Click on `Use This Template` button, then create new repository.
 * Name our repository and click on `Create repository from template` button.
@@ -481,7 +538,7 @@ I used the following validation tools to validate HTML, CSS, PYTHON codes. Below
 * Test server works locally: `python manage.py runserver`.
 * If the app has been installed correctly the window will display- The install worked successfully! Congratulations!
 
-### 2. Create your Heroku app
+### 2. Create your Heroku app:
 * Navigate to [Heroku](https://id.heroku.com).
 * Create a Heroku account by entering your email address and a password (or login if you have one already).
 * Activate the account through the authentication email sent to your email account.
@@ -494,7 +551,7 @@ I used the following validation tools to validate HTML, CSS, PYTHON codes. Below
 * Click Reveal Config Vars and add a new record with the `DISABLE_COLLECTSTATIC = 1`(note: this must be either removed or set to 0 for final deployment).
 * Next, scroll down to the Buildpack section, click `Add Buildpack` select python and click Save Changes.
 
-### 5. Heroku Deployment: 
+### 3. Heroku Deployment: 
 * Click Deploy tab in Heroku.
 * Select Github as the deployment method.
 * Confirm you want to connect to GitHub.
@@ -502,10 +559,10 @@ I used the following validation tools to validate HTML, CSS, PYTHON codes. Below
 * Scroll to the bottom of the deploy page and select the preferred deployment type.
 * Click either Enable Automatic Deploys for automatic deployment when you push updates to Github or To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
 
-### 6. Final Deployment
+### 4. Final Deployment:
 In the IDE:
 * When development is complete change the debug setting to: `DEBUG = False` in `settings.py` 
-* In Heroku settings config vars change the `DISABLE_COLLECTSTATIC` value to 0
+* In Heroku settings config vars remove/delete the `DISABLE_COLLECTSTATIC` and value.
 * Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku. 
 * To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
 
@@ -532,6 +589,7 @@ All images and post content are taken from the [google](https://www.google.com/s
 Special thanks to my facilitator Elaine Roche, My fellow students Laura and Simmi, Coading Coach Ruairidh MacArthur and John Rearden and Slack community for their assistance throughout this project.
 
 -----------------------------------------------------------------------------------------------------------------
-
-[Back to top](<>)
    
+[Back to top ⇧](#content)
+
+-----------------------------------------------------------------------------------------------------------------
