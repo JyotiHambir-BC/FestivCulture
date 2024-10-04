@@ -52,15 +52,13 @@ body {
     background-color: lightgoldenrodyellow;
 }
 
-.nav-item {
-    color: #000;
-    /* border: none; */
-    transition: all 0.6s ease-in-out;
-}
 
 .nav-link:hover {
     text-decoration: underline;
-    transition: ease-in-out;
+    transition: all;
+    color: #E84610;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 
